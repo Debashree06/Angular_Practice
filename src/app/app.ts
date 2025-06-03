@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Signup } from './signup/signup';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
+import { CounterApp } from './counterApp/counterApp';
 
 @Component({
   selector: 'app-root',
-  // imports: [Login, Signup, ProfileComponent],
+  imports: [CounterApp],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -26,32 +27,4 @@ export class App {
   // sum(a: number, b: number) {
   //   console.log(a + b);
   // }
-
-  count: number = 0;
-
-  increment() {
-    this.count++;
-  }
-
-  decrement() {
-    this.count = this.count - 1;
-  }
-
-  reset() {
-    this.count = 0;
-  }
-
-  // instead of above three function we used only one function with single parameter
-
-  handleCounter(val: string) {
-    if (val == 'minus') {
-      if (this.count > 0) {
-        this.count--;
-      }
-    } else if (val == 'plus') {
-      this.count++;
-    } else {
-      this.count = 0;
-    }
-  }
 }
