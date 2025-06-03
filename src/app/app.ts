@@ -4,10 +4,11 @@ import { Signup } from './signup/signup';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
 import { CounterApp } from './counterApp/counterApp';
+import { InputValue } from './input-value/input-value';
 
 @Component({
   selector: 'app-root',
-  imports: [CounterApp],
+  imports: [CounterApp, InputValue],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,11 +1,27 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-input-value',
+  selector: 'app-inputValue',
   imports: [],
   templateUrl: './input-value.html',
-  styleUrl: './input-value.css'
+  styleUrl: './input-value.css',
 })
 export class InputValue {
+  username = '';
 
+  getUserName(event: Event) {
+    // const name = (event.target as HTMLInputElement).value;
+    // console.log(name);
+    // this.username = name;
+    //this.username = (event.target as HTMLInputElement).value;
+  }
+
+  setUserName() {
+    this.username = 'Peter';
+  }
+
+  getUserNameWithTemplate(value: string) {
+    this.username = value;
+    console.log(value);
+  }
 }

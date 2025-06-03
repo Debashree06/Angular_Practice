@@ -1,1 +1,17 @@
-<p>input-value works!</p>
+<h1>Get and set input field</h1>
+
+<h2>{{username}}</h2>
+
+<!-- $ is used for a special value -->
+<input
+  value="{{username}}"
+  (input)="getUserName($event)"
+  type="text"
+  #userNameField
+  placeholder="enter user name"
+/>
+<br /><br />
+<button (click)="setUserName()">Set User Name</button>
+<button (click)="getUserNameWithTemplate(userNameField.value)">
+  Get User Name
+</button>
