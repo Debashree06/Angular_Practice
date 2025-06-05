@@ -8,7 +8,7 @@ import { InputValue } from './input-value/input-value';
 
 @Component({
   selector: 'app-root',
-  imports: [CounterApp, InputValue],
+  imports: [CounterApp, InputValue, Login, Signup],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

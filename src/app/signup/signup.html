@@ -1,1 +1,27 @@
-<h1 style="background-color: brown">Signup component</h1>
+<h1>Switch case in Angular</h1>
+
+<button (click)="handleColor('red')">Red</button>
+<button style="margin-left: 10px" (click)="handleColor('blue')">BLUE</button>
+<button style="margin-left: 10px" (click)="handleColor('green')">GREEN</button>
+<button style="margin-left: 10px" (click)="handleColor('yellow')">
+  YELLOW
+</button>
+
+<input
+  style="margin-left: 10px"
+  type="text"
+  placeholder="Enter color"
+  (input)="changeColor($event)"
+/>
+
+@switch (color) { @case ('red') {
+<h1 style="background-color: red">RED</h1>
+} @case ('blue') {
+<h1 style="background-color: blue">BLUE</h1>
+} @case ('green') {
+<h1 style="background-color: green">GREEN</h1>
+} @case ('yellow') {
+<h1 style="background-color: yellow">YELLOW</h1>
+}@default {
+<h1 style="background-color: black; color: white">No match color</h1>
+} }

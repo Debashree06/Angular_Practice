@@ -8,6 +8,11 @@
   cursor: pointer;
 }
 
+h1{
+    color: #000;
+    background-color: beige;
+}
+
 .bg-red{
     background-color: red;
 }

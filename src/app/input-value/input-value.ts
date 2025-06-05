@@ -4,7 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-inputValue',
   imports: [],
   templateUrl: './input-value.html',
-  styleUrl: './input-value.css',
+  // styleUrl: './input-value.css',
+  styles: [
+    'h1{background-color: green ;color: white; padding: 10px; border-radius: 10px}',
+  ],
 })
 export class InputValue {
   username = '';

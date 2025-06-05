@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })
-export class Signup {}
+export class Signup {
+  color = 'gold';
+
+  handleColor(val: string) {
+    this.color = val;
+  }
+
+  changeColor(event: Event) {
+    this.color = (event.target as HTMLInputElement).value;
+  }
+}

@@ -1,1 +1,67 @@
-<h1 style="background-color: bisque">Login component</h1>
+<h1>If Else | Control Flow</h1>
+
+<!-- @if (val < 9) {
+<div
+  style="
+    background-color: green;
+    color: white;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <h2>RCB</h2>
+</div>
+} -->
+
+<!-- click to hide box -->
+<button style="margin-bottom: 10px; cursor: pointer" (click)="hideBox()">
+  Hide
+</button>
+
+<!-- click to show box -->
+<button style="margin-left: 10px; cursor: pointer" (click)="showBox()">
+  Show
+</button>
+
+<!-- if show click to hide if hide click to show -->
+<button style="margin-left: 10px; cursor: pointer" (click)="toggleBox()">
+  Toggle
+</button>
+
+<!-- button name change according to condition -->
+<button style="margin-left: 10px; cursor: pointer" (click)="toggleBox()">
+  {{display? 'Hide' : 'Show'}}
+</button>
+
+@if (display) {
+<div
+  style="
+    background-color: red;
+    color: gold;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <h2>RCB</h2>
+</div>
+}
+
+<hr />
+
+<button style="margin-bottom: 10px; cursor: pointer" (click)="anotherFun()">
+  Toggle Divs
+</button>
+
+@if(displayOneDiv){
+
+<div style="background-color: green; height: 100px; width: 100px"></div>
+} @else{
+
+<div style="background-color: pink; height: 100px; width: 100px"></div>
+}

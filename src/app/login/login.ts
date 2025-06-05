@@ -4,8 +4,26 @@ import { Component } from '@angular/core';
   selector: 'app-login',
   imports: [],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrl: './login.css',
 })
 export class Login {
+  display = true;
+  val = 10;
+  displayOneDiv = true;
 
+  hideBox() {
+    this.display = false;
+  }
+
+  showBox() {
+    this.display = true;
+  }
+
+  toggleBox() {
+    this.display = !this.display;
+  }
+
+  anotherFun() {
+    this.displayOneDiv = !this.displayOneDiv;
+  }
 }
