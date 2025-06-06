@@ -1,0 +1,58 @@
+<!-- <p>Effect works!</p>
+
+<h1>{{userName()}}</h1>
+<button (click)="userName.set('Rossy')">Update Username</button>
+
+<h1>{{count()}}</h1>
+<button (click)="count.set(count()+1)">Display Heading</button>
+
+@if (displayHeading) {
+<h2
+  style="
+    background-color: chocolate;
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  Main Heading
+</h2>
+} -->
+
+<!-- For Loop Contextual Variable -->
+
+<h1>For Loop Contextual Variable</h1>
+
+@for (user of users; track user) {
+<!-- @if($first){
+<h2 style="color: green">
+  This is the user no {{$index+1}} and the use name is {{user}}
+</h2>
+} @else if ($last) {
+<h2 style="color: blueviolet">
+  This is the user no {{$index+1}} and the use name is {{user}}
+</h2>
+} @else {
+<h2 style="color: black">
+  This is the user no {{$index+1}} and the use name is {{user}}
+</h2>
+}  -->
+
+@if ($odd) {
+<h2 style="background-color: cadetblue">
+  This is the user no {{$index+1}} and the use name is {{user}}
+</h2>
+} @if ($even) {
+<h2 style="background-color: #ddd">
+  This is the user no {{$index+1}} and the use name is {{user}}
+</h2>
+}
+
+<h2>Total no of users {{$count}}</h2>
+
+}@empty {
+<h2>No records found 🔍</h2>
+}

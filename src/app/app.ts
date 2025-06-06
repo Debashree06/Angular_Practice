@@ -5,10 +5,14 @@ import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
 import { CounterApp } from './counterApp/counterApp';
 import { InputValue } from './input-value/input-value';
+import { Signals } from './signals/signals';
+import { EffectExample } from './effect-example/effect-example';
+import { DataBinding } from './data-binding/data-binding';
+import { TodoList } from './todo-list/todo-list';
 
 @Component({
   selector: 'app-root',
-  imports: [CounterApp, InputValue, Login, Signup],
+  imports: [TodoList],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

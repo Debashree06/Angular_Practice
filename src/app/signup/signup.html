@@ -25,3 +25,44 @@
 }@default {
 <h1 style="background-color: black; color: white">No match color</h1>
 } }
+
+<!-- for loop -->
+
+<h2>For loop in Angular</h2>
+
+@for (item of users; track item) {
+<h2>{{item}}</h2>
+}
+
+<hr />
+
+<!-- @for(stu of students; track stu.name ; let id= $index){
+<h4>
+  <span>{{stu.name}}</span>
+  <span>{{stu.age}}</span>
+  <span>{{stu.email}}</span>
+</h4>
+
+<button (click)="getName(stu.name)">Get Name In Console</button>
+} -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(stu of students; track stu ; let id= $index){
+    <tr>
+      <td>{{id+1}}</td>
+      <td>{{stu.name}}</td>
+      <td>{{stu.age}}</td>
+      <td>{{stu.email}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

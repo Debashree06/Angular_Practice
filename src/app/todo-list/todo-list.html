@@ -1,0 +1,26 @@
+<h1 [style.color]="color">To-do list!</h1>
+
+<h1
+  [style.color]="display ? 'green' : 'blue'"
+  [style.fontSize]="display ? fontSizeBig : fontSizeNormal "
+>
+  To-do list!
+</h1>
+
+<button (click)="zoomFontSize()">Zoom Heading</button>
+<p [style.fontSize.px]="size">I designed the todo list</p>
+
+<h1>{{task}}</h1>
+
+<input type="text" placeholder="Enter task.." [(ngModel)]="task" />
+<button style="margin-left: 6px" (click)="addTask()">Add Task</button>
+
+@for (item of taskList; track item.id) {
+<ul class="taskList">
+  <li>{{item.id+1}}</li>
+  <li>{{item.name}}</li>
+  <li>
+    <button (click)=" deleteTask(item.id)">DELETE</button>
+  </li>
+</ul>
+}
