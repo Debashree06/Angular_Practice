@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Signup } from './signup/signup';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile';
@@ -9,10 +9,11 @@ import { Signals } from './signals/signals';
 import { EffectExample } from './effect-example/effect-example';
 import { DataBinding } from './data-binding/data-binding';
 import { TodoList } from './todo-list/todo-list';
+import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [TodoList],
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
