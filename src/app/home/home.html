@@ -1,1 +1,5 @@
-<h2>home works!</h2>
+<h2>User list</h2>
+
+@for (item of users; track item.id) {
+<li><a routerLink="user/{{item.id}}/{{item.name}}">{{item.name}}</a></li>
+}
