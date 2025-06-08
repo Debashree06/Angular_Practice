@@ -6,6 +6,7 @@ import { About } from './about/about';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { User } from './user/user';
+import { ProfileComponent } from './profile/profile';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -14,5 +15,10 @@ export const routes: Routes = [
   { path: 'contact', component: Contact },
   { path: 'blog', component: Blog },
   { path: 'user/:id/:name', component: User },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    data: { name: 'Debashree Jena' },
+  },
   { path: '**', component: PageNotFound },
 ];

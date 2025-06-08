@@ -1,5 +1,6 @@
+import { routes } from './../app.routes';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,4 +15,11 @@ export class Home {
     { id: '3', name: 'Rani', age: 5 },
     { id: '4', name: 'Dolly', age: 35 },
   ];
+
+  //pass data by button click
+  constructor(private router: Router) {}
+
+  goToProfile() {
+    this.router.navigate(['profile'], { queryParams: { name: 'Rossy' } });
+  }
 }

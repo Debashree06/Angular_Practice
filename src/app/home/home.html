@@ -1,5 +1,18 @@
 <h2>User list</h2>
 
-@for (item of users; track item.id) {
+<!-- @for (item of users; track item.id) {
 <li><a routerLink="user/{{item.id}}/{{item.name}}">{{item.name}}</a></li>
-}
+} -->
+
+<!-- PASS DATA THROUGH ROUTER LINK -->
+<!-- <h1>
+  <a [routerLink]="['profile', {name:'Debashree'}]">Go to profile page</a>
+  <br />
+  <a [routerLink]="['profile', {name:'Rossy'}]">Go to profile page2</a>
+</h1> -->
+
+<!-- PASS DATA THROUGH BUTTON CLICK -->
+<!-- <button (click)="goToProfile()">Go to profile page</button> -->
+
+<!-- PASS DATA BY ROUTER -->
+<a routerLink="profile">Go to profile page</a>
